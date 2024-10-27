@@ -12,6 +12,8 @@ Example for creating content in Blender and exporting to RealityKit for AR apps 
 
 ### Creating the Baldosa Material
 
+- With Node-wrangler, Control-Shift-T for "Principled Texture Setup", select all in folder
+
 | Renaming material                                    | Base color texture                                       | Added albedo                                              |
 |------------------------------------------------------|----------------------------------------------------------|-----------------------------------------------------------|
 | ![Renaming material](images/01_CubeMaterial0.png)    | ![Base color texture](images/01_CubeMaterial1.png)       | ![Base color texture](images/01_CubeMaterial2.png)        |
@@ -61,3 +63,19 @@ Example for creating content in Blender and exporting to RealityKit for AR apps 
 ![](images/06_fullKeying.png)
 
 ## Building the RealityKit App
+
+```swift
+WindowGroup {
+    ContentView()
+        .environment(appModel)
+}
+.windowStyle(.volumetric)
+.defaultSize(width: 2, height: 2, depth: 2, in: .meters)
+```
+
+In `ContentView.swift`
+```swift
+scene.availableAnimations.forEach { animation in
+    scene.playAnimation(animation.repeat(duration: .infinity))
+}
+```
