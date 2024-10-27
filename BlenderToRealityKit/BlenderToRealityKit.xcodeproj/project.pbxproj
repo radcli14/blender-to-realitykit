@@ -18,12 +18,29 @@
 			remoteGlobalIDString = 8A02582C2CCD635E00553975;
 			remoteInfo = BlenderToRealityKit;
 		};
+		8A7E43272CCEA53900F8D6D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A0258252CCD635E00553975 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A7E43162CCEA53600F8D6D4;
+			remoteInfo = BlenderToRealityKitIPhone;
+		};
+		8A7E43312CCEA53900F8D6D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8A0258252CCD635E00553975 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8A7E43162CCEA53600F8D6D4;
+			remoteInfo = BlenderToRealityKitIPhone;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8A02582D2CCD635E00553975 /* BlenderToRealityKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlenderToRealityKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A0258312CCD635E00553975 /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		8A0258482CCD636100553975 /* BlenderToRealityKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlenderToRealityKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A7E43172CCEA53600F8D6D4 /* BlenderToRealityKitIPhone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlenderToRealityKitIPhone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A7E43262CCEA53900F8D6D4 /* BlenderToRealityKitIPhoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlenderToRealityKitIPhoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A7E43302CCEA53900F8D6D4 /* BlenderToRealityKitIPhoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlenderToRealityKitIPhoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -33,6 +50,13 @@
 				Info.plist,
 			);
 			target = 8A02582C2CCD635E00553975 /* BlenderToRealityKit */;
+		};
+		8A7E43442CCEB28500F8D6D4 /* Exceptions for "BlenderToRealityKitIPhone" folder in "BlenderToRealityKitIPhone" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 8A7E43162CCEA53600F8D6D4 /* BlenderToRealityKitIPhone */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -48,6 +72,24 @@
 		8A02584B2CCD636100553975 /* BlenderToRealityKitTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = BlenderToRealityKitTests;
+			sourceTree = "<group>";
+		};
+		8A7E43182CCEA53600F8D6D4 /* BlenderToRealityKitIPhone */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8A7E43442CCEB28500F8D6D4 /* Exceptions for "BlenderToRealityKitIPhone" folder in "BlenderToRealityKitIPhone" target */,
+			);
+			path = BlenderToRealityKitIPhone;
+			sourceTree = "<group>";
+		};
+		8A7E43292CCEA53900F8D6D4 /* BlenderToRealityKitIPhoneTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = BlenderToRealityKitIPhoneTests;
+			sourceTree = "<group>";
+		};
+		8A7E43332CCEA53900F8D6D4 /* BlenderToRealityKitIPhoneUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = BlenderToRealityKitIPhoneUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -68,6 +110,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8A7E43142CCEA53600F8D6D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A7E43232CCEA53900F8D6D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A7E432D2CCEA53900F8D6D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -77,6 +140,9 @@
 				8A02582F2CCD635E00553975 /* BlenderToRealityKit */,
 				8A0258302CCD635E00553975 /* Packages */,
 				8A02584B2CCD636100553975 /* BlenderToRealityKitTests */,
+				8A7E43182CCEA53600F8D6D4 /* BlenderToRealityKitIPhone */,
+				8A7E43292CCEA53900F8D6D4 /* BlenderToRealityKitIPhoneTests */,
+				8A7E43332CCEA53900F8D6D4 /* BlenderToRealityKitIPhoneUITests */,
 				8A02582E2CCD635E00553975 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,6 +152,9 @@
 			children = (
 				8A02582D2CCD635E00553975 /* BlenderToRealityKit.app */,
 				8A0258482CCD636100553975 /* BlenderToRealityKitTests.xctest */,
+				8A7E43172CCEA53600F8D6D4 /* BlenderToRealityKitIPhone.app */,
+				8A7E43262CCEA53900F8D6D4 /* BlenderToRealityKitIPhoneTests.xctest */,
+				8A7E43302CCEA53900F8D6D4 /* BlenderToRealityKitIPhoneUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -147,6 +216,74 @@
 			productReference = 8A0258482CCD636100553975 /* BlenderToRealityKitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		8A7E43162CCEA53600F8D6D4 /* BlenderToRealityKitIPhone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A7E43382CCEA53900F8D6D4 /* Build configuration list for PBXNativeTarget "BlenderToRealityKitIPhone" */;
+			buildPhases = (
+				8A7E43132CCEA53600F8D6D4 /* Sources */,
+				8A7E43142CCEA53600F8D6D4 /* Frameworks */,
+				8A7E43152CCEA53600F8D6D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8A7E43182CCEA53600F8D6D4 /* BlenderToRealityKitIPhone */,
+			);
+			name = BlenderToRealityKitIPhone;
+			packageProductDependencies = (
+			);
+			productName = BlenderToRealityKitIPhone;
+			productReference = 8A7E43172CCEA53600F8D6D4 /* BlenderToRealityKitIPhone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8A7E43252CCEA53900F8D6D4 /* BlenderToRealityKitIPhoneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A7E433B2CCEA53900F8D6D4 /* Build configuration list for PBXNativeTarget "BlenderToRealityKitIPhoneTests" */;
+			buildPhases = (
+				8A7E43222CCEA53900F8D6D4 /* Sources */,
+				8A7E43232CCEA53900F8D6D4 /* Frameworks */,
+				8A7E43242CCEA53900F8D6D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A7E43282CCEA53900F8D6D4 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				8A7E43292CCEA53900F8D6D4 /* BlenderToRealityKitIPhoneTests */,
+			);
+			name = BlenderToRealityKitIPhoneTests;
+			packageProductDependencies = (
+			);
+			productName = BlenderToRealityKitIPhoneTests;
+			productReference = 8A7E43262CCEA53900F8D6D4 /* BlenderToRealityKitIPhoneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8A7E432F2CCEA53900F8D6D4 /* BlenderToRealityKitIPhoneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8A7E433E2CCEA53900F8D6D4 /* Build configuration list for PBXNativeTarget "BlenderToRealityKitIPhoneUITests" */;
+			buildPhases = (
+				8A7E432C2CCEA53900F8D6D4 /* Sources */,
+				8A7E432D2CCEA53900F8D6D4 /* Frameworks */,
+				8A7E432E2CCEA53900F8D6D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A7E43322CCEA53900F8D6D4 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				8A7E43332CCEA53900F8D6D4 /* BlenderToRealityKitIPhoneUITests */,
+			);
+			name = BlenderToRealityKitIPhoneUITests;
+			packageProductDependencies = (
+			);
+			productName = BlenderToRealityKitIPhoneUITests;
+			productReference = 8A7E43302CCEA53900F8D6D4 /* BlenderToRealityKitIPhoneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -163,6 +300,17 @@
 					8A0258472CCD636100553975 = {
 						CreatedOnToolsVersion = 16.0;
 						TestTargetID = 8A02582C2CCD635E00553975;
+					};
+					8A7E43162CCEA53600F8D6D4 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					8A7E43252CCEA53900F8D6D4 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 8A7E43162CCEA53600F8D6D4;
+					};
+					8A7E432F2CCEA53900F8D6D4 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 8A7E43162CCEA53600F8D6D4;
 					};
 				};
 			};
@@ -182,6 +330,9 @@
 			targets = (
 				8A02582C2CCD635E00553975 /* BlenderToRealityKit */,
 				8A0258472CCD636100553975 /* BlenderToRealityKitTests */,
+				8A7E43162CCEA53600F8D6D4 /* BlenderToRealityKitIPhone */,
+				8A7E43252CCEA53900F8D6D4 /* BlenderToRealityKitIPhoneTests */,
+				8A7E432F2CCEA53900F8D6D4 /* BlenderToRealityKitIPhoneUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -195,6 +346,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		8A0258462CCD636100553975 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A7E43152CCEA53600F8D6D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A7E43242CCEA53900F8D6D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A7E432E2CCEA53900F8D6D4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -218,6 +390,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8A7E43132CCEA53600F8D6D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A7E43222CCEA53900F8D6D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A7E432C2CCEA53900F8D6D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -225,6 +418,16 @@
 			isa = PBXTargetDependency;
 			target = 8A02582C2CCD635E00553975 /* BlenderToRealityKit */;
 			targetProxy = 8A0258492CCD636100553975 /* PBXContainerItemProxy */;
+		};
+		8A7E43282CCEA53900F8D6D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A7E43162CCEA53600F8D6D4 /* BlenderToRealityKitIPhone */;
+			targetProxy = 8A7E43272CCEA53900F8D6D4 /* PBXContainerItemProxy */;
+		};
+		8A7E43322CCEA53900F8D6D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8A7E43162CCEA53600F8D6D4 /* BlenderToRealityKitIPhone */;
+			targetProxy = 8A7E43312CCEA53900F8D6D4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -444,6 +647,158 @@
 			};
 			name = Release;
 		};
+		8A7E43392CCEA53900F8D6D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BlenderToRealityKitIPhone/Preview Content\"";
+				DEVELOPMENT_TEAM = 59VPT4KMHW;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BlenderToRealityKitIPhone/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Testing AR with RealityView";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dcengineer.BlenderToRealityKitIPhone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A7E433A2CCEA53900F8D6D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"BlenderToRealityKitIPhone/Preview Content\"";
+				DEVELOPMENT_TEAM = 59VPT4KMHW;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BlenderToRealityKitIPhone/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Testing AR with RealityView";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dcengineer.BlenderToRealityKitIPhone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8A7E433C2CCEA53900F8D6D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 59VPT4KMHW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dcengineer.BlenderToRealityKitIPhoneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlenderToRealityKitIPhone.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BlenderToRealityKitIPhone";
+			};
+			name = Debug;
+		};
+		8A7E433D2CCEA53900F8D6D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 59VPT4KMHW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dcengineer.BlenderToRealityKitIPhoneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlenderToRealityKitIPhone.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/BlenderToRealityKitIPhone";
+			};
+			name = Release;
+		};
+		8A7E433F2CCEA53900F8D6D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 59VPT4KMHW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dcengineer.BlenderToRealityKitIPhoneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BlenderToRealityKitIPhone;
+			};
+			name = Debug;
+		};
+		8A7E43402CCEA53900F8D6D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 59VPT4KMHW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dcengineer.BlenderToRealityKitIPhoneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = BlenderToRealityKitIPhone;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -470,6 +825,33 @@
 			buildConfigurations = (
 				8A0258552CCD636100553975 /* Debug */,
 				8A0258562CCD636100553975 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A7E43382CCEA53900F8D6D4 /* Build configuration list for PBXNativeTarget "BlenderToRealityKitIPhone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A7E43392CCEA53900F8D6D4 /* Debug */,
+				8A7E433A2CCEA53900F8D6D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A7E433B2CCEA53900F8D6D4 /* Build configuration list for PBXNativeTarget "BlenderToRealityKitIPhoneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A7E433C2CCEA53900F8D6D4 /* Debug */,
+				8A7E433D2CCEA53900F8D6D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8A7E433E2CCEA53900F8D6D4 /* Build configuration list for PBXNativeTarget "BlenderToRealityKitIPhoneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8A7E433F2CCEA53900F8D6D4 /* Debug */,
+				8A7E43402CCEA53900F8D6D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
