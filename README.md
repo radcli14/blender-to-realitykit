@@ -1,4 +1,4 @@
-# blender-to-realitykit
+# Tutorial for Exporting Blender to use in VisionOS and iOS RealityKit
 
 ![visionOSanimation](https://github.com/user-attachments/assets/ea994382-a7b7-477f-a4f7-4f45878bcb61)
 
@@ -210,9 +210,61 @@ Even without having built our app yet, we can see what our model looks like in o
 
 ## Building the RealityKit App
 
+After the model is exported, we can build it into our own app using the [Reality Composer Pro](https://developer.apple.com/augmented-reality/tools/) tool and the new `RealityView` in SwiftUI.
+Speaking of the latter, this particular view is available in iOS 18 and later only, as it was released to the public in the fall of 2024. 
+It had been released on VisionOS about a year earlier, however the fall 2024 version is key as it is the first time the common RealityKit toolset has been available across both platforms.
+Since I am writing this in October 2024, I am using the most recently released tool, even though it may not be available yet on all devices, I expect it to be more-or-less standard going forward.
+
+### Creating a VisionOS Template Project
+
+We will start by creating our project in XCode.
+In this example, I have actually started from a VisionOS project, using "Create New Project," clicking on the VisionOS tab, and keeping "App" selected.
+In the dialog that followed, I gave the project the name "BlenderToRealityKit," but otherwise kept the defaults.
+Once the new project is created, and after a bit of a wait for some indexing and preparation of the VisionOS simulator, the window looks as seen below.
+
 ![New RealityKit Project](images/07_newRealityKitProject2.png)
 
+A few things to point out is that on the left, we see a lot of similar boiler-plate template functions as when creating any iOS app, but also a `Packages/RealityKitContent` folder.
+This is actually our Reality Composer template project, which we will visit shortly.
+The setup that comes along with the VisionOS starter app is useful because the Reality Composer files are configured to be bundled at compile time in an efficient format.
+In the center of the screen we see the Swift code for the `ContentView.swift`, in which we see that the template file imports an entity named "Scene" from that `RealityKitContent` bundle, as well as some basic UI (the latter of which you would almost certainly delete in a real app).
+On the right hand side we see a preview in the VisionOS with a simulated living room, with a white ball floating up close to the ceiling.
+We don't see our model because, of course, we haven't added it yet; we will do that next.
+
+### Adding our Content in Reality Composer Pro
+
+Launch Reality Composer Pro, go to "File -> Open" and navigate to your newly created XCode project, and open the `RealityKitContent` project that was created inside.
+You should see a fairly basic scene file, with one or two sphere's and a grid material.
+When I opened this on my laptop, the viewer had defaulted to showing the "Immersive" scene, which is fine, but for our example we would rather work with the standard "Scene," which you should be able to open by double-clicking on the icon labeled `Scene.usda` on the bottom of the screen.
+With this open, you can "File -> Import" and select the `example.usdz` file that was created earlier after running Reality Converter.
+After the import, the file should now be visible and represented with an icon at the bottom of the screen.
+Drag that icon onto either the model tree on the left hand side, or directly into the viewer, to add it to the scene.
+I set the model's position, which you can access by selecting the model and editing fields on the right hand side of the screen, to (0, -60, 0) which will place its base slightly below eye level in the VisionOS scene.
+
 ![Adding our model to the Reality Composer scene](images/08_exampleAddedIntoScene.png)
+
+Reality Composer Pro also provides an additional opportunity to make corrections or updates to the `.usdz` file that may not have come through with the `.glb` conversion.
+If you expand the `example` model tree on the left hand side, you can find a `Materials` folder and `Translucent` material, which we created earlier in Blender for Suzanne's head.
+When I checked this material on my own system, I found the opacity value was still set to one, not to 0.5 as-intended.
+I made that update manually here.
+
+There is also a `Geom` folder in the model tree, containing the meshes, and also an object named "Light."
+When we created the model, we kept the default point light that Blender creates on startup.
+If we select this light, we see that the transform of its position is the same, but, there is no light component.
+If you choose, you can add in a light component by clicking the "Add Component" button on the right hand side, and the created light will be placed at the same location as it had been in Blender.
+Given that lighting methods, and resulting appearance, are just fundamentally different in iOS/VisionOS from Blender, I'd probably tend to skip spending too much time with lighting in Blender and instead add it after the fact in RealityKit, but thats all a matter of preference.
+
+### Building the App for VisionOS
+
+After the above steps (and making sure we save the Reality Composer project), the scene is now configured to be visible in a VisionOS app!
+If you return to XCode, and either run the app in the preview panel or simulator, you should expect to see something like the image below.
+
+![Initial build, model is clipped and static](images/09_modelImportedButEarClippedNoAnimation.png)
+
+As you can see, our model now appears in the virtual living room, however, there are a couple of problems.
+First of all, if you look closely, you can see that Suzanne's ear is partially clipped, and the tile appears to be missing.
+This is because we are using a volumetric window style, which VisionOS will default to use a 1x1x1 meter cube, slightly smaller than the bounds of our model.
+A straightforward fix is to increase the size of this volumetric window using the `.defaultSize` modifier, which can be added under the `WindowGroup` in the `BlenderToRealityKipApp.swift` file.
 
 ```swift
 WindowGroup {
@@ -223,11 +275,71 @@ WindowGroup {
 .defaultSize(width: 2, height: 2, depth: 2, in: .meters)
 ```
 
-In `ContentView.swift`
+Second of all, the model is stationary, there is no rotating head animation.
+We simply need to play the animation in the scene, and specify that it repeats infinitely.
+I have done this in the `ContentView.swift` file, directly underneath the code that loads the scene in the `RealityView`.
 ```swift
 scene.availableAnimations.forEach { animation in
     scene.playAnimation(animation.repeat(duration: .infinity))
 }
 ```
 
+With these changes made, we can now see the full model with ears and base intact, and with the head spinning, all rendered in the VisionOS simulator.
+
 ![Animated model in VisionOS](videos/visionOSanimation.gif)
+
+### Building the App for VisionOS
+
+At this point, my laptop was cooking, as the VisionOS simulator is a pretty heavy weight application to run on my MacBook Air.
+Besides, I don't even own a set of the Vision Pro goggles, so I can't even run this version of the app on a real device.
+I mentioned earlier that with the 2024 iOS release, the `RealityView` is common across both platforms, so I gave it a try.
+
+In XCode, if you click the `BlenderToRealityKit` project on the left side, and navigate to the general tab, there is an option to simply add iPhone and iPad as a destination.
+Indeed, this is what I tried first, with the result being something like 15 new red error messages.
+Basically, while the `RealityView` itself is common, the template app that is created for VisionOS actually uses several features that do not exist on iOS.
+This includes pretty much the entire `ImmersiveSpace`, the volumetric window, and the toolbar "ornament" placement.
+While I probably could have put in a bunch of "If VisionOS" code to work through these, I opted instead to start at a more bare-bones level.
+
+From the same panel, under "Targets," I clicked the plus "+" button to bring up the dialog to create a new target.
+I selected the iOS tab, and "App."
+Note that I did not select "Augmented Reality App," just the basic one.
+Once this new target was created, I dropped a stripped down version of the `RealityView` that was created for VisionOS into the `ContentView` body, with the entirety of that function pasted below.
+
+```swift
+import SwiftUI
+import RealityKit
+import RealityKitContent
+
+struct ContentView: View {
+    var body: some View {
+        RealityView { content in
+            // Sets the RealityView to place the scene content in the real world view
+            content.camera = .spatialTracking
+            
+            // Add the initial RealityKit content
+            if let scene = try? await Entity(named: "Scene")  { //}, in: realityKitContentBundle) { // TODO: why does this throw an error on iOS?
+                content.add(scene)
+                
+                // Shrink the Blender object by half and move it in front of the camera to be visible in the iPhone camera
+                scene.transform.scale = [0.5, 0.5, 0.5]
+                scene.transform.translation.z = -1
+                
+                scene.availableAnimations.forEach { animation in
+                    scene.playAnimation(animation.repeat(duration: .infinity))
+                }
+            }
+        }
+    }
+}
+```
+
+The main thing I would note here is to use `RealityView` in AR mode, meaning with your model super-imposed on the world viewed through your device's camera, you want to specify that `content.camera = .spacialTracking`.
+Another note, which I don't know if it is a bug, or user error on my behalf, is the commented line with the `TODO` statement at the model import. 
+The section that I've commented is the `in:` argument, which in the VisionOS case was loading from the `RealityKitContent` bundle associated with the Reality Composer Pro project.
+That line, when included, causes an error at build time that I have not been able to debug.
+As a placeholder, I instead use Reality Composer Pro to export the "Scene" as its own `.usdz` file into the folder for the iPhone target, and commented out the reference to the bundle.
+If anyone knows what I'm doing wrong, I'd be happy to hear.
+
+In either case, this simple code was enough to get a very basic AR app running on my iPhone, with a Blender-generated model and animation, as you can see in the video below.
+
+![Working AR app on iOS](videos/iOSrealityView.gif)
