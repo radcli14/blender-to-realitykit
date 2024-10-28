@@ -49,7 +49,7 @@ The result is shown below.
 
 ### Creating the Baldosa Material
 
-The bldosa tile in the model is one meter square and two centimeters thick.
+The baldosa tile in the model is one meter square and two centimeters thick.
 When starting the model, I could have used the default cube for this purpose, however, I ended up deleting that (as is tradition), and instead creating a 1 meter plane, and then extruding the two centimeter thickness.
 For whatever reason, I found the textures and UV's to map a bit nicer onto the plane than on the cube; I have no reason for this, it is what it is.
 
