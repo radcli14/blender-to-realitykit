@@ -1,6 +1,6 @@
 # Tutorial for Exporting Blender to use in VisionOS and iOS RealityKit
 
-![visionOSanimation](https://github.com/user-attachments/assets/ea994382-a7b7-477f-a4f7-4f45878bcb61)
+![visionOSanimation](videos/visionOSanimation.gif)
 
 As I've been learning how to create augmented reality (AR) apps for iOS through my development of [Juego de la Rana](github.com/radcli14/larana), one of the topics I'm constantly revisiting is how to import my own 3D content.
 In "La Rana," I include three unique objects:
