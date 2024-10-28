@@ -117,7 +117,7 @@ I used a much simpler material for Suzanne, where I set the roughness to zero to
 
 ### Animating
 
-I added a simple animation to this exampl, as I know this is one aspect that may not always be passed properly along with the file export and conversion.
+I added a simple animation to this example, as I know this is one aspect that may not always be passed properly along with the file export and conversion.
 In this case, I animated a simple rotation about the vertical axis, which repeats on a one second loop.
 
 I start by switching to the animation tab, selecting Suzanne, and while hovering over her tapping the "I" key to bring up the keyframe menu.
