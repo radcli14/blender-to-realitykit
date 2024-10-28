@@ -19,7 +19,7 @@ struct ContentView: View {
             if let scene = try? await Entity(named: "Scene")  { //}, in: realityKitContentBundle) { // TODO: why does this throw an error on iOS?
                 content.add(scene)
                 
-                // Shring the Blender object by half and move it in front of the camera to be visible in the iPhone camera
+                // Shrink the Blender object by half and move it in front of the camera to be visible in the iPhone camera
                 scene.transform.scale = [0.5, 0.5, 0.5]
                 scene.transform.translation.z = -1
                 
