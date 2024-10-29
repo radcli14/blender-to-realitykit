@@ -1,4 +1,4 @@
-# Tutorial for Exporting Models from Blender to RealityKit for AR Apps VisionOS and iOS 
+# Tutorial for Exporting Models from Blender to RealityKit for AR Apps on VisionOS and iOS 
 
 ![visionOSanimation](videos/visionOSanimation.gif)
 
