@@ -259,6 +259,8 @@ If you expand the `example` model tree on the left hand side, you can find a `Ma
 When I viewed this material on my own system, I found the opacity value was still set to one, not to 0.5 as-intended.
 I made that update manually here.
 
+![Opacity did not get passed in the converted .usdz file, I set it in Reality Composer](images/08_realityKitContent_SetMaterialOpacity.png)
+
 There is also a `Geom` folder in the model tree, containing the meshes, and also an object named "Light."
 When we built the model, we kept the default point light that Blender creates on startup.
 If we select this light, we see that the transform of its position is the same, but, there is no light component.
