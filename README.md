@@ -303,7 +303,7 @@ With these changes made, we can now see the full model with ears and base intact
 
 ![Animated model in VisionOS](videos/visionOSanimation.gif)
 
-### Building the App for VisionOS
+### Building the App for iOS
 
 At this point, my laptop was cooking, as the VisionOS simulator is a pretty heavy weight application to run on my MacBook Air.
 I don't own a set of the Vision Pro goggles, so I can't run this version of the app on a real device.
@@ -348,7 +348,7 @@ struct ContentView: View {
 }
 ```
 
-The main thing I would note here i to specify `content.camera = .spacialTracking` to use `RealityView` in AR mode, meaning with your model super-imposed on the world viewed through your device's camera.
+The main thing I would note here is to specify `content.camera = .spacialTracking` to use `RealityView` in AR mode, meaning with your model super-imposed on the world viewed through your device's camera.
 
 Another note, which I don't know if it is a bug, or user error on my behalf, is the commented line with the `TODO` statement at the model import. 
 The section that I've commented is the `in:` argument, which in the VisionOS case was loading from the `RealityKitContent` bundle associated with the Reality Composer Pro project.
